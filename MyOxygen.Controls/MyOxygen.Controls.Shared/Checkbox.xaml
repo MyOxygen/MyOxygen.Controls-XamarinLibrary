@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:MyOxygen.Controls"
+    x:Class="MyOxygen.Controls.Checkbox">
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer
+            Tapped="Handle_Tapped"/>
+    </ContentView.GestureRecognizers>
+    <ContentView.Content>
+        <StackLayout
+            x:Name="ContentLayout"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="FillAndExpand">
+            
+            <ContentView
+                x:Name="CurrentCheckboxCircle"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <AbsoluteLayout
+                    Margin="0, -5">
+                    <local:CircleView
+                        x:Name="TapCircle"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.5"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        Color="LightGray"
+                        Opacity="0"
+                        Radius="40"/>
+                    <local:TintedImage
+                        x:Name="ImageUnchecked"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.5"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        HeightRequest="25"
+                        Source="{OnPlatform Android='Unchecked', iOS='Unchecked/UncheckedIcon'}"
+                        TintColor="Black"
+                        WidthRequest="25"/>
+                    <local:TintedImage
+                        x:Name="ImageChecked"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.5"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        HeightRequest="25"
+                        Opacity="0"
+                        Source="{OnPlatform Android='Checked', iOS='Checked/CheckedIcon'}"
+                        TintColor="Black"
+                        WidthRequest="25"/>
+                </AbsoluteLayout>
+            </ContentView>
+            
+            <local:StaticLabel
+                x:Name="CurrentCheckboxLabel"
+                HorizontalOptions="FillAndExpand"
+                LineBreakMode="WordWrap"
+                TextColor="Black"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"/>
+            
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
+

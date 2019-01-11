@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{4152B4A5-C9CD-4612-87AE-49D931CEF92D}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MyOxygen.Controls</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ArrowIndicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CircleView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StaticLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TintedImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Checkbox.xaml.cs">
+      <DependentUpon>Checkbox.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Checkbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

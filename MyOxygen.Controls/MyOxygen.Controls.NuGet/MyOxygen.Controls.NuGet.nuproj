@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09CB0D94-FF21-4A6E-8B6F-76C4D31E7AE2}</ProjectGuid>
+    <Description>A collection of custom controls to be used with Xamarin Forms.</Description>
+    <PackageId>MyOxygen.Controls</PackageId>
+    <PackageVersion>1.0.1</PackageVersion>
+    <Authors>thomasbartleet</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyOxygen.Controls</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>MyOxygen.Controls.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyOxygen.Controls.Android\MyOxygen.Controls.Android.csproj">
+      <Project>{2C8D9DC9-B10F-40AD-A7CB-56888343BC6F}</Project>
+      <Name>MyOxygen.Controls.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyOxygen.Controls.iOS\MyOxygen.Controls.iOS.csproj">
+      <Project>{3FC475CC-9D14-439F-AE35-B44197C0BBD6}</Project>
+      <Name>MyOxygen.Controls.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>

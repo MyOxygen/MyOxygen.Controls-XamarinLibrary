@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MyOxygen.Controls.Shared", "MyOxygen.Controls.Shared\MyOxygen.Controls.Shared.shproj", "{4152B4A5-C9CD-4612-87AE-49D931CEF92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOxygen.Controls.iOS", "MyOxygen.Controls.iOS\MyOxygen.Controls.iOS.csproj", "{3FC475CC-9D14-439F-AE35-B44197C0BBD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOxygen.Controls.Android", "MyOxygen.Controls.Android\MyOxygen.Controls.Android.csproj", "{2C8D9DC9-B10F-40AD-A7CB-56888343BC6F}"
+EndProject
+Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "MyOxygen.Controls.NuGet", "MyOxygen.Controls.NuGet\MyOxygen.Controls.NuGet.nuproj", "{09CB0D94-FF21-4A6E-8B6F-76C4D31E7AE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FC475CC-9D14-439F-AE35-B44197C0BBD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC475CC-9D14-439F-AE35-B44197C0BBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC475CC-9D14-439F-AE35-B44197C0BBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC475CC-9D14-439F-AE35-B44197C0BBD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C8D9DC9-B10F-40AD-A7CB-56888343BC6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8D9DC9-B10F-40AD-A7CB-56888343BC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8D9DC9-B10F-40AD-A7CB-56888343BC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8D9DC9-B10F-40AD-A7CB-56888343BC6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CB0D94-FF21-4A6E-8B6F-76C4D31E7AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CB0D94-FF21-4A6E-8B6F-76C4D31E7AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CB0D94-FF21-4A6E-8B6F-76C4D31E7AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CB0D94-FF21-4A6E-8B6F-76C4D31E7AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
